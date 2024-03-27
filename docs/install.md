@@ -59,9 +59,9 @@ The easiest way to uninstall Magisk is directly through the Magisk app. If you i
 
 ## Magisk in Recovery
 
-In the case when your device does not have ramdisk in boot images, Magisk has no choice but to hijack the recovery partition. For these devices, you will have to **reboot to recovery** every time you want Magisk enabled.
+In the case when your device does not have ramdisk in boot images, Magisk has no choice but to hijack the recovery partition. For these devices, you will have to **reboot to recovery** every time you want Magisk enabled. (that is crazy !)
 
-When Magisk hijacks the recovery, there is a special mechanism to allow you to _actually_ boot into recovery mode. Each device model has its own key combo to boot into recovery, as an example for Galaxy S10 it is (Power + Bixby + Volume Up). A quick search online should easily get you this info. As soon as you press the key combo and the device vibrates with a splash screen, release all buttons to boot into Magisk. If you decide to boot into the actual recovery mode, **long press volume up until you see the recovery screen**.
+When Magisk hijacks the recovery, there is a special mechanism to allow you to _actually_ boot into recovery mode. Each device model has its own key combo to boot into recovery, as an example for Galaxy S10 it is Power + Bixby + Volume Up(Be careful: you risk breaking some tendons in your wrist). A quick search online should easily get you this info. As soon as you press the key combo and the device vibrates with a splash screen, release all buttons to boot into Magisk. If you decide to boot into the actual recovery mode, **long press volume up until you see the recovery screen**.
 
 As a summary, after installing Magisk in recovery **(starting from power off)**:
 
@@ -75,7 +75,7 @@ As a summary, after installing Magisk in recovery **(starting from power off)**:
 
 Before proceeding, please acknowledge that:
 
-- Installing Magisk **WILL** trip your Knox Warranty Bit, this action is not reversible in any way.
+- Installing Magisk **WILL** trip your Knox Warranty Bit, this action is not reversible in any way (3rd thing that is be unlawful in EU)
 - Installing Magisk for the first time **REQUIRES** a full data wipe (this is **NOT** counting the data wipe when unlocking bootloader). Please make a backup your data.
 
 ### Flashing Tools
@@ -119,7 +119,7 @@ Having KnoxGuard active will prevent you from installing/running Magisk regardle
   - [Frija](https://forum.xda-developers.com/s10-plus/how-to/tool-frija-samsung-firmware-downloader-t3910594)
   - [Samloader](https://forum.xda-developers.com/s10-plus/how-to/tool-samloader-samfirm-frija-replacement-t4105929)
   - [Bifrost](https://forum.xda-developers.com/t/tool-samsung-samsung-firmware-downloader.4240719/)
-- Unzip the firmware and copy the `AP` tar file to your device. It is normally named as `AP_[device_model_sw_ver].tar.md5`
+- Unzip the firmware on another device (yes you have to buy a PC to be the admin of you smartphone - 4th illegal things in EU) and copy the `AP` tar file to your device. It is normally named as `AP_[device_model_sw_ver].tar.md5`
 - Press the **Install** button in the Magisk card
 - If your device does **NOT** have boot ramdisk, check the **"Recovery Mode"** option
 - Choose **"Select and Patch a File"** in method, and select the `AP` tar file
@@ -128,8 +128,8 @@ Having KnoxGuard active will prevent you from installing/running Magisk regardle
   **DO NOT USE MTP** as it is known to corrupt large files.
 - Reboot to download mode. Open Odin on your PC, and flash `magisk_patched.tar` as `AP`, together with `BL`, `CP`, and `CSC` (**NOT** `HOME_CSC` because we want to **wipe data**) from the original firmware.
 - Your device should reboot automatically once Odin finished flashing. **Agree to do a factory reset if asked.**
-- If your device does **NOT** have boot ramdisk, reboot to recovery now to enable Magisk (reason stated in [Magisk in Recovery](#magisk-in-recovery)).
-- Install the Magisk app you've already downloaded and launch the app. It should show a dialog asking for additional setup.
+- If your device does **NOT** have boot ramdisk, reboot to recovery now (now before or after the previous automatically reboot?) to enable Magisk (reason stated in [Magisk in Recovery](#magisk-in-recovery)).
+- Install the Magisk app you've already downloaded (? but if data was wiped I have to redonload it again before installing it and if data was not wiped it is already installed) and launch the app. It should show a dialog asking for additional setup. (if not?)...
 - Let the app do its job and automatically reboot the device. Voila!
 
 ### Upgrading the OS
